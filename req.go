@@ -181,6 +181,7 @@ func (r *Req) Do(method, rawurl string, vs ...interface{}) (resp *Resp, err erro
 		ProtoMajor: 1,
 		ProtoMinor: 1,
 	}
+	req.Close = true
 	resp = &Resp{req: req, r: r}
 
 	var queryParam param
